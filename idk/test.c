@@ -62,26 +62,21 @@ void	print(struct node *structA, struct node *structB)
 	}
 }
 
-void swap(node_t **head)
+void sa(node_t **head)
 {
 	node_t *temp;
 	node_t *tempH;
+	int store;
 
 	tempH = *head;
-	temp = tempH->next; //points to the 2nd node
-	tempH = temp->next; //head points to the 3rd node
-	temp->next = tempH; //the 2nd node point to head (making it the 1st node)
+	temp = tempH->next;
+	store = temp->data;
+	temp->data = tempH->data;
+	tempH->data = store;
+}
+void  pb(node_t *head)
+{
 
-
-	/*char **agv;
-	node_t *temp;
-	head = malloc(sizeof(node_t));
-	head->data = ft_atoi(agv[1]);
-	head->next = malloc(sizeof(node_t));
-	head->next->data = ft_atoi(agv[2]);
-	*temp = head->data;
-	head->data = head->next->data;
-	head->next->data = *temp;*/
 }
 
 int		main(int argc, char **argv)
@@ -90,7 +85,7 @@ int		main(int argc, char **argv)
 	struct node *b;
 	a = put(argc, argv);
 	print(a, b);
-	swap(&a);
+	sa(&a);
 	print(a, b);
 	return(0); 
 }
