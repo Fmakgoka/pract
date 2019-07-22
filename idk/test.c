@@ -61,6 +61,14 @@ void	print(struct node *structA, struct node *structB)
 
 	}
 }
+void delete( node_t * head )
+{
+    node_t * temp;
+   	temp = head->next;
+    head->data = head->next->data;
+    head->next = temp->next;
+    free(temp);
+}
 
 void sa(node_t **head)
 {
@@ -74,9 +82,30 @@ void sa(node_t **head)
 	temp->data = tempH->data;
 	tempH->data = store;
 }
-void  pb(node_t *head)
-{
 
+void pb(node_t **a, node_t **b, int data)
+{
+	node_t *head;
+
+	head = (node_t*)malloc(sizeof(node_t));
+	head->data = data;
+	head->next = (*b);
+	(*b) = head;
+	if ((*b)->data)
+		delete(*a);
+	else
+		(*a) = NULL;
+}
+void ra(node_t ** head)
+{
+	node_t *temp;
+	node_t *tempH;
+
+	tempH = *head;
+	temp = tempH->next;
+	tempH = temp->next;
+	temp->next = tempH->next;
+	tempH->next = temp ;
 }
 
 int		main(int argc, char **argv)
@@ -87,5 +116,12 @@ int		main(int argc, char **argv)
 	print(a, b);
 	sa(&a);
 	print(a, b);
+	pb(&a, &b, a->data);
+	pb(&a, &b, a->data);
+	pb(&a, &b, a->data);
+	print(a, b);
+	ra(&a);
+	print(a, b);
+
 	return(0); 
 }
