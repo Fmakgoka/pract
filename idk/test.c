@@ -102,10 +102,29 @@ void ra(node_t ** head)
 	node_t *tempH;
 
 	tempH = *head;
+	temp = *head;
+	while (temp->next != NULL)
+		temp = temp->next;
+	temp->next = tempH;
 	temp = tempH->next;
-	tempH = temp->next;
-	temp->next = tempH->next;
-	tempH->next = temp ;
+	tempH->next = NULL;
+	*head = temp;
+}
+void rb(node_t **head)
+{
+	node_t *temp;
+	node_t *tempH;
+
+	temp = *head;
+	tempH = *head;
+	while (temp->next != NULL)
+	{
+		temp = temp->next;
+	}
+	temp->next = tempH;
+	temp = tempH->next;
+	tempH->next = NULL;
+	*head = temp;
 }
 
 int		main(int argc, char **argv)
@@ -121,6 +140,7 @@ int		main(int argc, char **argv)
 	pb(&a, &b, a->data);
 	print(a, b);
 	ra(&a);
+	rb(&b);
 	print(a, b);
 
 	return(0); 
