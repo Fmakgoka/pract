@@ -6,13 +6,13 @@
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/22 12:19:11 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/07/23 13:39:53 by fmakgoka         ###   ########.fr       */
+/*   Updated: 2019/07/23 15:01:23 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void pb(nod_t **a, node_t **b, int data)
+void pb(node_t **a, node_t **b, int data)
 {
 	node_t *head;
 

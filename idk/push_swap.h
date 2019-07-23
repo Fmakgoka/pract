@@ -6,7 +6,7 @@
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 13:19:48 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/07/23 13:32:01 by fmakgoka         ###   ########.fr       */
+/*   Updated: 2019/07/23 15:33:31 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,7 @@ void	rr(node_t **a, node_t **);
 void	rra(node_t **head);
 void	rrb(node_t **head);
 void	rrr(node_t **a, node_t **b);
+void	delete(node_t *head);
+void	push_swap(node_t *head);
 
 #endif
