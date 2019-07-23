@@ -91,7 +91,7 @@ void pb(node_t **a, node_t **b, int data)
 	head->data = data;
 	head->next = (*b);
 	(*b) = head;
-	if ((*b)->data)
+	if ((*a)->next)
 		delete(*a);
 	else
 		(*a) = NULL;
@@ -126,6 +126,51 @@ void rb(node_t **head)
 	tempH->next = NULL;
 	*head = temp;
 }
+void	rra(node_t **head)
+{
+	if (*head == NULL || (*head)->next == NULL)
+		return ;
+	node_t *seclast = NULL;
+	node_t *last = *head;
+	while (last->next != NULL)
+	{
+		seclast = last;
+		last = last->next;
+	}
+	seclast->next = NULL;
+	last->next = *head;
+	*head = last;
+}
+void rrb(node_t **head)
+{
+	if (*head == NULL || (*head)->next == NULL)
+		return ;
+	node_t *seclast = NULL;
+	node_t *last = *head;
+	while (last->next != NULL)
+	{
+		seclast = last;
+		last = last->next;
+	}
+	seclast->next = NULL;
+	last->next = *head;
+	*head = last;
+}
+void pa(node_t **a, node_t **b, int data)
+{
+	node_t *head;
+
+	head = (node_t*)malloc(sizeof(node_t));
+	head->data = data;
+	head->next = (*a);
+	(*a) = head;
+	if ((*b)->next)
+		delete(*b);
+	else
+	{
+		*b = NULL;
+	}
+}
 
 int		main(int argc, char **argv)
 {
@@ -141,6 +186,15 @@ int		main(int argc, char **argv)
 	print(a, b);
 	ra(&a);
 	rb(&b);
+	print(a, b);
+	rra(&a);
+	rrb(&b);
+	print(a, b);
+	sa(&a);
+	print(a, b);
+	pa(&a, &b, b->data);
+	pa(&a, &b, b->data);
+	pa(&a, &b, b->data);
 	print(a, b);
 
 	return(0); 
