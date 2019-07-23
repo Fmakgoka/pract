@@ -6,9 +6,11 @@
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/22 12:19:11 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/07/22 15:37:51 by fmakgoka         ###   ########.fr       */
+/*   Updated: 2019/07/23 13:39:53 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "push_swap.h"
 
 void pb(nod_t **a, node_t **b, int data)
 {

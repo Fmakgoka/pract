@@ -6,9 +6,11 @@
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/22 15:12:37 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/07/22 15:15:25 by fmakgoka         ###   ########.fr       */
+/*   Updated: 2019/07/23 13:44:46 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "push_swap.h"
 
 void delete(node_t *head)
 {
