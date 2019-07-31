@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sa.c                                               :+:      :+:    :+:   */
+/*   minmax.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/22 12:13:03 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/07/29 11:25:04 by fmakgoka         ###   ########.fr       */
+/*   Created: 2019/07/29 11:16:15 by fmakgoka          #+#    #+#             */
+/*   Updated: 2019/07/29 16:18:22 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void sa(node_t **head)
+int		minmax(node_t **head)
 {
-	node_t *temp;
-	node_t *tempH;
-	int store;
-
-	tempH = *head;
-	temp = tempH->next;
-	store = temp->data;
-	temp->data = tempH->data;
-	tempH->data = store;
+	node_t *temp = *head;
+	int min = (*head)->data;
+	while (temp->next != NULL)
+	{
+		if (temp->data < min)
+			min = temp->data;
+		temp = temp->next;
+	}
+	return (min);
 }

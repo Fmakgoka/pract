@@ -6,7 +6,7 @@
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 13:19:48 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/07/23 15:33:31 by fmakgoka         ###   ########.fr       */
+/*   Updated: 2019/07/29 15:34:28 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ void	rra(node_t **head);
 void	rrb(node_t **head);
 void	rrr(node_t **a, node_t **b);
 void	delete(node_t *head);
-void	push_swap(node_t *head);
+void	push_swap(node_t **head);
+int		minmax(node_t **head);
 
 #endif

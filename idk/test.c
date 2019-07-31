@@ -6,7 +6,7 @@
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 14:47:16 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/07/23 15:40:02 by fmakgoka         ###   ########.fr       */
+/*   Updated: 2019/07/29 16:18:29 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,25 @@ void push(node_t ** head, int data) {
     *head = new_node;
 }
 
+void 	push_last(node_t **head, int data)
+{
+   	node_t *new_node;
+	node_t *temp;
+
+    new_node = malloc(sizeof(node_t));
+    new_node->data = data;
+    new_node->next = NULL;
+	temp = *head;
+	if (*head == NULL)
+		*head = new_node;
+	else
+	{
+		while (temp->next != NULL)
+			temp = temp->next;
+		temp->next = new_node;
+	}
+}
+
 struct node* put(int agc, char **agv)
 {
 	struct node* a = NULL;
@@ -37,7 +56,7 @@ struct node* put(int agc, char **agv)
 	b = (struct node*)malloc(sizeof(struct node));
 	while (i < agc)
 	{
-		push(&a, ft_atoi(agv[i]));
+		push_last(&a, ft_atoi(agv[i]));
 		i++;
 	}
 	return (a);
@@ -75,9 +94,11 @@ int		main(int argc, char **argv)
 	struct node *a;
 	struct node *b;
 	a = put(argc, argv);
-//	push_swap(a);
-	sa(&a);
-	pb(&a, &b, a->data);
+	print(a, b);
+	//sa(&a);
+	//push_swap(&a);
+	minmax(&a);
+	/*pb(&a, &b, a->data);
 	pb(&a, &b, a->data);
 	pb(&a, &b, a->data);
 	ra(&a);
@@ -87,7 +108,7 @@ int		main(int argc, char **argv)
 	sa(&a);
 	pa(&a, &b, b->data);
 	pa(&a, &b, b->data);
-	pa(&a, &b, b->data);
+	pa(&a, &b, b->data);*/
 	print(a, b);
 
 	return(0); 
