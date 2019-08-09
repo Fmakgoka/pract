@@ -6,7 +6,7 @@
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/22 12:19:11 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/07/23 15:01:23 by fmakgoka         ###   ########.fr       */
+/*   Updated: 2019/08/05 11:56:40 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void pb(node_t **a, node_t **b, int data)
 	head->next = (*b);
 	(*b) = head;
 	if((*b)->data)
-		delete(*a);
+		deletep(*a);
 	else
 		(*a) = NULL;
 }

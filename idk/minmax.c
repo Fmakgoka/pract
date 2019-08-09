@@ -6,7 +6,7 @@
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/29 11:16:15 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/07/29 16:18:22 by fmakgoka         ###   ########.fr       */
+/*   Updated: 2019/08/09 10:16:38 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,7 @@ int		minmax(node_t **head)
 			min = temp->data;
 		temp = temp->next;
 	}
+	if (temp->data < min)
+		min = temp->data;
 	return (min);
 }

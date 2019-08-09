@@ -6,26 +6,12 @@
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 14:47:16 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/07/29 16:18:29 by fmakgoka         ###   ########.fr       */
+/*   Updated: 2019/08/09 10:10:03 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "push_swap.h"
-  
-/*typedef struct node{
-    int data;
-    struct node* next;
-}node_t;*/
-   
-void push(node_t ** head, int data) {
-    node_t * new_node;
-    new_node = malloc(sizeof(node_t));
-
-    new_node->data = data;
-    new_node->next = *head;
-    *head = new_node;
-}
 
 void 	push_last(node_t **head, int data)
 {
@@ -48,12 +34,10 @@ void 	push_last(node_t **head, int data)
 
 struct node* put(int agc, char **agv)
 {
-	struct node* a = NULL;
-	struct node* b ;
+	 a = NULL;
 	int i;
 
 	i = 1;
-	b = (struct node*)malloc(sizeof(struct node));
 	while (i < agc)
 	{
 		push_last(&a, ft_atoi(agv[i]));
@@ -89,27 +73,18 @@ void	print(struct node *structA, struct node *structB)
 	}
 }
 
+#include <stdio.h>
 int		main(int argc, char **argv)
 {
 	struct node *a;
 	struct node *b;
 	a = put(argc, argv);
 	print(a, b);
-	//sa(&a);
-	//push_swap(&a);
-	minmax(&a);
-	/*pb(&a, &b, a->data);
-	pb(&a, &b, a->data);
-	pb(&a, &b, a->data);
-	ra(&a);
-	rb(&b); //rb
-	rra(&a);
-	rrb(&b); //rrb
-	sa(&a);
-	pa(&a, &b, b->data);
-	pa(&a, &b, b->data);
-	pa(&a, &b, b->data);*/
+	sort5(&a, &b);
+	//sorted3(&a);
+	//minmax(&a);
+	//ft_putendl("min");
+	//printf("%d", minmax(&a));
 	print(a, b);
-
 	return(0); 
 }

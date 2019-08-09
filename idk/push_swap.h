@@ -6,7 +6,7 @@
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 13:19:48 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/07/29 15:34:28 by fmakgoka         ###   ########.fr       */
+/*   Updated: 2019/08/06 12:49:43 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ typedef struct node{
     int data;
     struct node* next;
 }node_t;
+node_t *a;
+node_t *b;
 void	sa(node_t **head);
 void	sb(node_t **head);
 void	pa(node_t **a, node_t **b, int data);
@@ -30,8 +32,9 @@ void	rr(node_t **a, node_t **);
 void	rra(node_t **head);
 void	rrb(node_t **head);
 void	rrr(node_t **a, node_t **b);
-void	delete(node_t *head);
-void	push_swap(node_t **head);
+void	deletep(node_t *head);
 int		minmax(node_t **head);
-
+void	sort3(node_t **head);
+void	sort5(node_t **head, node_t **headb);
+int		sorted3(node_t **head);
 #endif
