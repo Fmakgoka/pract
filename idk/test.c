@@ -6,7 +6,7 @@
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 14:47:16 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/08/09 10:10:03 by fmakgoka         ###   ########.fr       */
+/*   Updated: 2019/08/19 15:13:45 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,11 +80,13 @@ int		main(int argc, char **argv)
 	struct node *b;
 	a = put(argc, argv);
 	print(a, b);
-	sort5(&a, &b);
+	//sort5(&a, &b);
+	sorttmp(&a);
 	//sorted3(&a);
 	//minmax(&a);
 	//ft_putendl("min");
 	//printf("%d", minmax(&a));
 	print(a, b);
+	middle(&a);
 	return(0); 
 }

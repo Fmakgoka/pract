@@ -6,7 +6,7 @@
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 13:19:48 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/08/06 12:49:43 by fmakgoka         ###   ########.fr       */
+/*   Updated: 2019/08/19 11:46:28 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,8 @@ int		minmax(node_t **head);
 void	sort3(node_t **head);
 void	sort5(node_t **head, node_t **headb);
 int		sorted3(node_t **head);
+void	middle(node_t **head);
+void	median(node_t  **head);
+void	sorttmp(node_t **head);
+
 #endif
