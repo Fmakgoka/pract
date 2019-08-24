@@ -6,7 +6,7 @@
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 13:55:17 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/08/19 11:47:51 by fmakgoka         ###   ########.fr       */
+/*   Updated: 2019/08/24 11:33:13 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,6 @@ void	sort5(node_t **head, node_t **headb)
 	while (count <= 1 )
 	{
 		min = minmax(head);
-		printf("min = %d\n", min);
 		if (min == (*head)->data)
 		{
 			ft_putendl("pb");
@@ -79,15 +78,12 @@ void	sort5(node_t **head, node_t **headb)
 		}
 		else if (min == (*head)->next->next->data)
 		{
-			ft_putendl("ra\nsa\npb");
 			ra(head);
 			sa(head);
 			pb(head, headb, (*head)->data);
 		}
 		else if (min == (*head)->next->next->next->data)
 		{
-			printf("rra min = %d\n", min);
-			ft_putendl("rra\nrra");
 			rra(head);
 			if (is_ontop(head, min) == 1)
 			{
@@ -96,14 +92,12 @@ void	sort5(node_t **head, node_t **headb)
 			}
 			else
 			{
-				ft_putendl("rra\npb");
 				rra(head);
 				pb(head, headb, (*head)->data);
 			}
 		}
 		else 
 		{
-			ft_putendl("rra\npb");
 			rra(head);
 			pb(head, headb, (*head)->data);
 		}

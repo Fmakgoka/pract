@@ -6,13 +6,26 @@
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/19 11:05:15 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/08/19 15:13:42 by fmakgoka         ###   ########.fr       */
+/*   Updated: 2019/08/24 14:22:57 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sorttmp(node_t **head)
+/*node_t		*clonelst(node_t  *head)
+{
+	if (head == NULL)
+		return (NULL);
+	else
+	{
+		node_t *newnode= (node_t *)malloc(sizeof(node_t));
+		newnode->data = head->data;
+		newnode->next = clonelst(head->next);
+		return (newnode);
+	}
+}*/
+
+node_t	*sorttmp(node_t **head)
 {
 	node_t *tmp;
 	node_t *tmp2;
@@ -34,4 +47,5 @@ void	sorttmp(node_t **head)
 		}	
 		tmp = tmp->next;
 	}
+	return (tmp);
 }

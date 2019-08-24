@@ -6,25 +6,44 @@
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/19 08:55:53 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/08/19 09:14:17 by fmakgoka         ###   ########.fr       */
+/*   Updated: 2019/08/24 14:57:53 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdio.h>
 
-void	middle(node_t **head)  
-{  
-    node_t *slow_ptr = *head;  
-    node_t *fast_ptr = *head;  
-  
-    if (head!=NULL)  
-    {  
-        while (fast_ptr != NULL && fast_ptr->next != NULL)  
-        {  
-            fast_ptr = fast_ptr->next->next;  
-            slow_ptr = slow_ptr->next;  
-        }  
-        printf("The middle element is [%d]\n\n", slow_ptr->data);  
-    }  
-}  
+int		tosize(node_t *head)
+{
+	a = head;
+	int count;
+	count = 0;
+	while (a->next != NULL)
+	{
+		count++;
+		a = a->next;
+	}
+	return (count);
+}
+
+int		middle(node_t *temp)
+{
+	int tmp = tosize(temp);
+	int mid;
+	temp = sorttmp(&temp);
+	mid = 0;
+	if (tmp % 2 == 0)
+	{
+		mid = tmp / 2;
+	}
+	else
+	{
+		mid = (tmp / 2) + 1;
+	}
+	tmp = 0;
+	while (tmp < mid)
+	{
+		tmp += 1;
+		temp = temp->next;
+	}
+	return (temp->data);
+}	
