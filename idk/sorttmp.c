@@ -6,13 +6,13 @@
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/19 11:05:15 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/08/24 14:22:57 by fmakgoka         ###   ########.fr       */
+/*   Updated: 2019/08/26 14:33:17 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-/*node_t		*clonelst(node_t  *head)
+node_t		*clonelst(node_t  *head)
 {
 	if (head == NULL)
 		return (NULL);
@@ -23,9 +23,9 @@
 		newnode->next = clonelst(head->next);
 		return (newnode);
 	}
-}*/
+}
 
-node_t	*sorttmp(node_t **head)
+void	sorttmp(node_t **head)
 {
 	node_t *tmp;
 	node_t *tmp2;
@@ -47,5 +47,5 @@ node_t	*sorttmp(node_t **head)
 		}	
 		tmp = tmp->next;
 	}
-	return (tmp);
+	//return (tmp);
 }

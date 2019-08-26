@@ -6,7 +6,7 @@
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 14:47:16 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/08/24 14:57:49 by fmakgoka         ###   ########.fr       */
+/*   Updated: 2019/08/26 15:17:44 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,16 +78,22 @@ int		main(int argc, char **argv)
 {
 	struct node *a;
 	struct node *b;
+	struct node *temp;
+
 	a = put(argc, argv);
 	print(a, b);
-	tosize(a);
-	ft_putendl("siz");
-	printf("%d\n", tosize(a));
-	sorttmp(&a);
+	ft_putendl("\nclone of stack a\n");
+	temp = clonelst(a);
+	print(temp, b);
+	ft_putendl("\nSorted copy\n");
+	sorttmp(&temp);
+	print(temp, b);
+	ft_putendl("\noriginal stack a\n");
 	print(a, b);
-	middle(a);
-	ft_putendl("mid");
-	printf("%d\n", middle(a));
-	//bignum(&a, &b);
+	ft_putendl("\nmid\n");
+	middle(&temp);
+	printf("%d\n", middle(&temp));
+	bignum(&a, &b);
+	print(a, b);
 	return(0); 
 }
