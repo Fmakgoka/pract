@@ -6,12 +6,20 @@
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 13:55:17 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/08/24 11:33:13 by fmakgoka         ###   ########.fr       */
+/*   Updated: 2019/08/27 14:56:06 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+void	sort2(node_t **head)
+{
+	if ((*head)->data > (*head)->next->data )
+	{
+		ft_putendl("sa");
+		sa(head);
+	}
+}
 
 void	sort3(node_t **head)
 {
