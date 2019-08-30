@@ -6,7 +6,7 @@
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 13:19:48 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/08/26 14:11:16 by fmakgoka         ###   ########.fr       */
+/*   Updated: 2019/08/30 14:52:14 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,6 @@ int		tosize(node_t **head);
 void	bignum(node_t **head, node_t **headb);
 int		is_ontop( node_t **head, int min);
 node_t	*clonelst(node_t *head);
+void	print(struct node *structA, struct node *structB);
 
 #endif
