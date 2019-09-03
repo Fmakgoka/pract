@@ -1,22 +1,11 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   push_bignum.c                                      :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/13 12:22:46 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/08/30 14:57:42 by fmakgoka         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "push_swap.h"
 #include <stdio.h>
 
 void    bignum(node_t **stack_a, node_t  **stack_b)
 {
     node_t *current = NULL;
-    int median;
+    int Q1;
+	int mid;
     int size;
     int i;
     current = *stack_a;
@@ -24,16 +13,17 @@ void    bignum(node_t **stack_a, node_t  **stack_b)
     while (size > 3)
     {
         current = *stack_a;
-        print(*stack_a, *stack_b);
+        //print(*stack_a, *stack_b);
         size = tosize(stack_a);
         //ft_putendl("size=");
-        printf("size = %d\n", size);
+        //printf("size = %d\n", size);
         i = 1;
-        median = middle(stack_a);
-        printf("median = %d\n", median);
+        Q1 = ft_firstQ(stack_a); //5
+        //printf("Q1 = %d\n", Q1);
+		mid = middle(stack_a);
         while(i <= (size))
         {   current = *stack_a;
-            if(current->data < median)
+            if(current->data < mid)
             {
                 ft_putstr("current = ");
                 ft_putnbr(current->data);
@@ -45,4 +35,46 @@ void    bignum(node_t **stack_a, node_t  **stack_b)
             i++;
         }
     }
+}
+
+
+void	sortbig(node_t **head, node_t **headb)
+{
+	int i = 0;
+	int rot = 0;
+	int size = tosize(headb);
+	int maxi = ft_max(headb);
+	ft_putendl("big");
+	//bignum(head, headb);
+	if ((*head)->data > (*head)->next->data)
+	{
+		sa(head);
+		ft_putendl("sa");
+	}
+
+	ft_putnbr(size);
+	ft_putchar('\n');
+	while (i < size && headb)
+	{
+		maxi = ft_max(headb);
+		while((*headb)->data != maxi)
+		{
+			rb(headb);
+			ft_putendl("rb");
+			rot++;
+		}
+		if ((*headb)->data == maxi)
+		{
+			pa(head, headb, (*headb)->data);
+			ft_putendl("pa");
+		}
+		while (rot > 0)
+		{
+			rrb(headb);
+			ft_putendl("rrb");
+			rot--;
+		}
+		i++;
+	}
+	ft_putendl("We out");
 }

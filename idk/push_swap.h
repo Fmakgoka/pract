@@ -6,7 +6,7 @@
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 13:19:48 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/08/30 14:52:14 by fmakgoka         ###   ########.fr       */
+/*   Updated: 2019/09/03 15:19:27 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,8 @@ void	rra(node_t **head);
 void	rrb(node_t **head);
 void	rrr(node_t **a, node_t **b);
 void	deletep(node_t *head);
-int		minmax(node_t **head);
+int		ft_min(node_t **head);
+int		ft_max(node_t **head);
 void	sort3(node_t **head);
 void	sort5(node_t **head, node_t **headb);
 int		sorted3(node_t **head);
@@ -45,5 +46,10 @@ void	bignum(node_t **head, node_t **headb);
 int		is_ontop( node_t **head, int min);
 node_t	*clonelst(node_t *head);
 void	print(struct node *structA, struct node *structB);
+void	ft_quartile(node_t **head);
+void	sortbig(node_t **head, node_t **headb);
+int		*find_ch(node_t **top);
+int		ft_firstQ(node_t **head);
+int		ft_thirdQ(node_t **head);
 
 #endif

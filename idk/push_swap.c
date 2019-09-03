@@ -6,7 +6,7 @@
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 13:55:17 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/08/27 14:56:06 by fmakgoka         ###   ########.fr       */
+/*   Updated: 2019/09/02 13:14:55 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,11 +67,11 @@ void	sort5(node_t **head, node_t **headb)
 {
 	int min = 0;
 	int count= 0;
-	min = minmax(head);
+	min = ft_min(head);
 
 	while (count <= 1 )
 	{
-		min = minmax(head);
+		min = ft_min(head);
 		if (min == (*head)->data)
 		{
 			ft_putendl("pb");
