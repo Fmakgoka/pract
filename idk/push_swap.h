@@ -6,7 +6,7 @@
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 13:19:48 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/09/03 15:19:27 by fmakgoka         ###   ########.fr       */
+/*   Updated: 2019/09/05 12:45:57 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,10 @@ void	sortbig(node_t **head, node_t **headb);
 int		*find_ch(node_t **top);
 int		ft_firstQ(node_t **head);
 int		ft_thirdQ(node_t **head);
+void	ft_pushB(node_t **head, node_t **headb);
+int		find_index(int x, node_t *b);
+int		find_big_i(node_t *b);
+void	ft_revmid(node_t *a, node_t *b, int x);
+void	ft_moveb(node_t *a, node_t *b);
 
 #endif

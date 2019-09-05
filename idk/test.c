@@ -6,7 +6,7 @@
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 14:47:16 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/09/03 15:48:00 by fmakgoka         ###   ########.fr       */
+/*   Updated: 2019/09/05 15:28:30 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,21 +83,29 @@ int		main(int argc, char **argv)
 	int x = 0;
 
 	a = put(argc, argv);
-	print(a, b);
+//	print(a, b);
 	//ft_putendl("\nclone of stack a\n");
 	temp = clonelst(a);
 	/*i = find_ch(&a);
-	while (x < 5)
+	while (i[x])
 	{
 		printf("q = %d\n", i[x]);
 		x++;
 	}*/
-	sorttmp(&temp);
+	//sorttmp(&temp);
 	//print(temp, b);
+	
+	//ft_firstQ(&a);
+	//printf("q1 = %d\n", ft_firstQ(&a));
+	//middle(&a);
+	//printf("mid = %d\n", middle(&a));
 	bignum(&a, &b);
-	print(a, b);
+//	print(a, b);
 	//print(a, b);
+	
 	sortbig(&a, &b);
-	print(a, b);
+//	print(a, b);
+	//ft_moveb(a, b);
+//	print(a, b);
 	return(0); 
 }

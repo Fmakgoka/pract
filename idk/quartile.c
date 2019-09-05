@@ -12,13 +12,16 @@ int     *find_ch(node_t **top)
    j = 0;
    i = 1;
    new = 0;
-   chunk = (int *)malloc(sizeof(int) * 5);
+   chunk = (int *)malloc(sizeof(int) * 14);
    if ((a - b) % 2 != 0)
        new += 1;
    new += (a - b) / 5;
-   chunk[0] = new + b - 1;
-   while (i < 4 && j < 5)
-       chunk[i++] = chunk[j++] + new;
-   chunk[i] = ft_max(top);
+   chunk[0] = b;
+   while (i < 13)
+   {
+       chunk[i] = chunk[i - 1] + new + 1;
+	   i++;
+   }
+   chunk[i] = '\0';
    return (chunk);
 }
