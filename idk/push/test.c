@@ -6,7 +6,7 @@
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 14:47:16 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/09/05 15:28:30 by fmakgoka         ###   ########.fr       */
+/*   Updated: 2019/09/09 14:47:07 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,20 +92,8 @@ int		main(int argc, char **argv)
 		printf("q = %d\n", i[x]);
 		x++;
 	}*/
-	//sorttmp(&temp);
-	//print(temp, b);
-	
-	//ft_firstQ(&a);
-	//printf("q1 = %d\n", ft_firstQ(&a));
-	//middle(&a);
-	//printf("mid = %d\n", middle(&a));
-	bignum(&a, &b);
-//	print(a, b);
-	//print(a, b);
-	
-	sortbig(&a, &b);
-//	print(a, b);
-	//ft_moveb(a, b);
-//	print(a, b);
+	print(a, b);
+	sort5(&a, &b);
+	print(a, b);
 	return(0); 
 }

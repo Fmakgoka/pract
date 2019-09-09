@@ -1,18 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_issorted.c                                      :+:      :+:    :+:   */
+/*   issorted.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/06 12:12:38 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/08/07 11:04:25 by fmakgoka         ###   ########.fr       */
+/*   Created: 2019/09/07 01:21:19 by fmakgoka          #+#    #+#             */
+/*   Updated: 2019/09/09 17:05:03 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int  sorted3(node_t **head)
+int		issorted_a(node_t **head, node_t **headb)
 {
-	
+//	if (!headb)
+//	{
+		while ((*head)->next)
+		{
+			if ((*head)->data < (*head)->next->data)
+				head = &(*head)->next;
+			else
+				return (0);
+		}
+		return (1);
+//	}
+//	return (0);
 }

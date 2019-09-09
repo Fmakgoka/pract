@@ -6,18 +6,26 @@
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:05:02 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/06/24 08:44:12 by fmakgoka         ###   ########.fr       */
+/*   Updated: 2019/09/09 15:16:49 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# define BUFF_SIZE 5
+# define FD_SIZE 1024
 
 # include <ctype.h>
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
+# include <sys/types.h>
+# include <sys/uio.h>
+# include <unistd.h>
+# include <fcntl.h>
+# include <unistd.h>
 
+int			get_next_line(const int fd, char **line);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 int		ft_isalpha(int c);
@@ -70,5 +78,10 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s);
 char	**ft_strsplit(char const *s, char c);
 char	*ft_itoa(int n);
+int		ft_isnumber(char *str);
+int		ft_isint(char *str);
+void	ft_free(char **str);
+int		ft_check_dup(int argc, char **argv);
+
 
 #endif

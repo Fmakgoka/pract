@@ -6,7 +6,7 @@
 #    By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/29 14:32:47 by fmakgoka          #+#    #+#              #
-#    Updated: 2019/06/20 09:20:14 by fmakgoka         ###   ########.fr        #
+#    Updated: 2019/09/09 15:15:26 by fmakgoka         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ SRC = ft_toupper.c ft_tolower.c ft_isalpha.c ft_isdigit.c ft_isalnum.c \
 	  ft_putnbr.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_memalloc.c\
 	  ft_memdel.c ft_strnew.c ft_strdel.c ft_strclr.c ft_striter.c ft_striteri.c ft_strmap.c\
 	  ft_strmapi.c ft_strequ.c ft_strnequ.c ft_strsub.c ft_strjoin.c ft_strtrim.c\
-	  ft_strsplit.c ft_itoa.c
+	  ft_strsplit.c ft_itoa.c ft_intmax.c ft_arrydel.c ft_isnumber.c ft_check_dup.c get_next_line.c
 OBJECTS = ft_toupper.o ft_tolower.o ft_isalpha.o ft_isdigit.o ft_isalnum.o \
           ft_memset.o ft_strcmp.o ft_strncmp.o ft_isascii.o ft_isprint.o ft_bzero.o \
           ft_memchr.o ft_strcat.o ft_strchr.o ft_strcpy.o ft_strstr.o ft_memccpy.o ft_memcmp.o \
@@ -28,7 +28,7 @@ OBJECTS = ft_toupper.o ft_tolower.o ft_isalpha.o ft_isdigit.o ft_isalnum.o \
 		  ft_putnbr.o ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_memalloc.o\
 		  ft_memdel.o ft_strnew.o ft_strdel.o ft_strclr.o ft_striter.o ft_striteri.o ft_strmap.o\
 		  ft_strmapi.o ft_strequ.o ft_strnequ.o ft_strsub.o ft_strjoin.o ft_strtrim.o\
-		  ft_strsplit.o ft_itoa.o
+		  ft_strsplit.o ft_itoa.o ft_intmax.o ft_arrydel.o ft_isnumber.o ft_check_dup.o get_next_line.o
 
 CFLAGS = -Wall -Werror -Wextra
 

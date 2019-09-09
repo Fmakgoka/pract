@@ -1,51 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rr.c                                               :+:      :+:    :+:   */
+/*   add.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/23 12:35:07 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/09/09 15:23:56 by fmakgoka         ###   ########.fr       */
+/*   Created: 2019/09/09 12:48:00 by fmakgoka          #+#    #+#             */
+/*   Updated: 2019/09/09 15:04:19 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-/*void ra(node_t ** head)
+void 	push_last(node_t **head, int data)
 {
+   	node_t *new_node;
 	node_t *temp;
-	node_t *tempH;
 
-	tempH = *head;
+    new_node = malloc(sizeof(node_t));
+    new_node->data = data;
+    new_node->next = NULL;
 	temp = *head;
-	while (temp->next != NULL)
-		temp = temp->next;
-	temp->next = tempH;
-	temp = tempH->next;
-	tempH->next = NULL;
-	*head = temp;
+	if (*head == NULL)
+		*head = new_node;
+	else
+	{
+		while (temp->next != NULL)
+			temp = temp->next;
+		temp->next = new_node;
+	}
 }
 
-void rb(node_t **headb)
+struct node* ft_put(int agc, char **agv)
 {
-	node_t *temp;
-	node_t *tempH;
+	 a = NULL;
+	int i;
 
-	temp = *headb;
-	tempH = *headb;
-	while (temp->next != NULL)
+	i = 1;
+	while (i < agc)
 	{
-		temp = temp->next;
+		push_last(&a, ft_atoi(agv[i]));
+		i++;
 	}
-	temp->next = tempH;
-	temp = tempH->next;
-	tempH->next = NULL;
-	*headb = temp;
-}*/
-
-void rr(node_t **a, node_t **b)
-{
-	ra(a);
-	rb(b);
+	return (a);
 }

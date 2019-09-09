@@ -6,43 +6,72 @@
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/13 15:04:22 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/07/29 11:27:07 by fmakgoka         ###   ########.fr       */
+/*   Updated: 2019/09/09 17:04:19 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/libft.h"
+#include "../libft/libft.h"
+#include "../push_swap.h"
 
-int		check_arg(char **argv)
+char  **fixstr(char **s)
 {
-	int i = 1;
-	int j = 0;
+	int i;
+	char **str;
 
-	while (argv[i])
+	i = 0;
+	str = s;
+	while (s[i])
 	{
-		j = 0;
-		while (argv[i][j] != '\0')
-		{
-			if (argv[i][0] == '-' || argv[i][0] == '+')
-				j++;
-			if (ft_isdigit(argv[i][j]) == 0)
-				return (-1);
-			j++;
-		}
+		str[i] = str[i + 1];
 		i++;
 	}
-	return (1);
+	str[i] = 0;
+	return (s);
+
+}
+
+int		newlen(char **str)
+{
+	int i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	i--;
+	return (i);
 }
 
 int		main(int argc, char **argv)
 {
-	if (argc < 2)
-		return (0);
-	if (check_arg(argv) == -1)
+	int i;
+	node_t *a;
+	node_t *b;
+	char **number;
+
+	i = 1;
+	if (argc > 1)
 	{
-		ft_putendl("Error");
-		return (0);
+		argc--;
+		//number = fixstr(argv);
+		if (argc == 1)
+		{
+			number = ft_strsplit(argv[1], ' ');
+			argc = newlen(number);
+		}
+		else
+			number = fixstr(argv);
+		while (i < argc)
+		{
+			if (!ft_isint(number[i]) || !ft_check_dup(argc, number)
+					|| !ft_isnumber(number[i]))
+			{
+				ft_putendl_fd("Error", 2);
+				return (0);
+			}
+			i++;
+		}
+		a = ft_put(argc, number);
+		ft_do_op(&a, &b);
 	}
-	ft_putstr(argv[1]);
-	ft_putchar('\n');
 	return (0);
 }
